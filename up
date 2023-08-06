@@ -14,7 +14,12 @@ if [ command -v dunst ]; then
 fi
 
 if [ -x "$(command -v picom)" ]; then
-    picom &> /dev/null &
+    if [ -d $HOME/.config/picom.conf ]; then
+        picom --config $HOME/.config/picom.conf &> /dev/null &
+    else
+        cp /etc/xdg/picom.conf $HOME/.config
+        picom --config $HOME/.config/picom.conf &> /dev/null &
+    fi    
 fi
 
 if [ -x "$(command -v feh)" ]; then
