@@ -9,16 +9,16 @@ if [ -f "/tmp/leftwm-theme-down" ]; then
 fi
 ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
-if [ command -v dunst ]; then
-    dunst
+if [ -x "$(command -v dunst)" ]; then
+    dunst &> /dev/null &
 fi
 
 if [ -x "$(command -v picom)" ]; then
-    picom &> /dev/null &
+    picom --config "$SCRIPTPATH/picom.conf" &> /dev/null &
 fi
 
 if [ -x "$(command -v feh)" ]; then
-    feh --bg-fill "$SCRIPTPATH/wallpaper.jpg"
+    feh --bg-fill "$SCRIPTPATH/wallpaper.jpg" &> /dev/null &
 fi
 
 leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
