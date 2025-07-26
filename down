@@ -10,6 +10,6 @@ pkill picom
 # }}} 
 
 # = Remove Config Paths {{{  
-rm "$HOME/.config/dunst" 
-rm "$HOME/.config/rofi"
+rm -rf "$HOME/.config/dunst" 
+rm -rf "$HOME/.config/rofi"
 # }}} 
