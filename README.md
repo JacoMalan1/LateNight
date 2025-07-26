@@ -15,6 +15,7 @@ A LeftWM theme for those late night coding sessions.
  - feh
  - polybar
  - dunst
+ - rofi 
 
 ## Attribution
 The [wallpaper photo](https://unsplash.com/photos/cXU6tNxhub0) was taken by Andre Benz and is to be used under the [Unsplash License](https://unsplash.com/license).

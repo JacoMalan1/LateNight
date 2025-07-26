@@ -1,0 +1,48 @@
+// ================================= //
+// ========== Rofi Config ========== //
+// ================================= //
+configuration {
+    modi: "drun,run,ssh,filebrowser";
+    kb-cancel: "Escape,Alt+F1";
+    
+    /* Dark Color Scheme */
+    color-normal: "argb:ff1a1b26, argb:ffa9b1d6, argb:ff1a1b26, argb:ff7aa2f7, argb:ff1a1b26";
+    color-urgent: "argb:ff1a1b26, argb:fff7768e, argb:ff1a1b26, argb:ffff9e64, argb:ff1a1b26";
+    color-active: "argb:ff1a1b26, argb:ff7aa2f7, argb:ff1a1b26, argb:ffe0af68, argb:ff1a1b26";
+    color-window: "argb:ff1a1b26, argb:ff7aa2f7";
+    
+    /* Additional Settings */
+    show-icons: true;
+    icon-theme: "Papirus";
+    font: "JetBrains Mono 11";
+    ssh-command: "{terminal} -e ssh {host}";
+    filebrowser-dir: "~";
+}
+
+window {
+    width: 35%;
+    padding: 15px;
+    border: 1px;
+    border-color: #414868;
+    border-radius: 8px;
+    background-color: argb:ff1a1b26;
+}
+
+inputbar {
+    children: [prompt, entry];
+    spacing: 10px;
+    padding: 8px;
+    background-color: argb:ff252936;  /* Slightly lighter than window */
+}
+
+prompt {
+    background-color: #ffffff;       /* Pure white */
+    text-color: #1a1b26;             /* Dark background color */
+    padding: 6px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+entry {
+    text-color: #ffffff;             /* White text for better visibility */
+}

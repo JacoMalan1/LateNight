@@ -9,18 +9,24 @@ if [ -f "/tmp/leftwm-theme-down" ]; then
 fi
 ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 # }}} 
-
+# = Config Rofi {{{ 
+if [ -x "$(command -v rofi)" ]; then 
+	mkdir -p "/home/$USER/.config/rofi"
+	cp -r "${SCRIPTPATH}/rofi/" "/home/$USER/.config/"
+fi
+# }}} 
 # = Config Dunst {{{ 
 if [ -x "$(command -v dunst)" ]; then
     mkdir -p "/home/$USER/.config/dunst"
-    cp "$SCRITPATH/dunstrc" "/home/$USER/.config/dunst/"
+    echo "$SCRITPATH"
+    cp "${SCRIPTPATH}/dunstrc" "/home/$USER/.config/dunst/"
     dunst &> /dev/null &
 fi
 # }}}
 
 # = Config picom {{{ 
 if [ -x "$(command -v picom)" ]; then
-    picom --config "$SCRIPTPATH/picom.conf" &> /dev/null &
+    picom --config "${SCRIPTPATH}/picom.conf" &> /dev/null &
 fi
 # }}} 
 
