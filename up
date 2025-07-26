@@ -14,7 +14,7 @@ if [ -x "$(command -v dunst)" ]; then
 fi
 
 if [ -x "$(command -v picom)" ]; then
-    picom &> /dev/null &
+    picom --config "$SCRIPTPATH/picom.conf" &> /dev/null &
 fi
 
 if [ -x "$(command -v feh)" ]; then
