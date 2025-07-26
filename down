@@ -6,6 +6,7 @@ pkill polybar
 pkill dunst
 pkill feh
 pkill compton
+pkill picom
 
 # Restore old dunst config
 if [ -e $HOME/.config/dunstrc.bak ]; then
